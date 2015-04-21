@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ShareX - 打造跨平台的原生应用</title>
+
+		<meta name="description" content="ShareX - 打造跨平台的原生应用">
+		<meta name="author" content="Rocky Duan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href = "http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/css/bootstrap.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      .reveal table td {
+        padding: 1.2em 0.5em 1.2em 0.5em;
+      }
+      .reveal img.messy-storyboard {
+        max-width: none;
+        max-height: none;
+        width: 600px;
+        border: none;
+        margin: 0;
+      }
+      .reveal .messy-wrapper{
+        position: absolute;
+        max-width: none;
+        max-height: none;
+        width: 600px;
+        left: 50%;
+        margin-left: -300px;
+        transform: scale(6.9) translate(35.2%,-36.7%);
+        transition: transform 1s;
+        top: 50px;
+      }
+      .reveal img.initial-storyboard {
+        position: absolute;
+        max-width: none;
+        max-height: none;
+        left: 50%;
+        width: 300px;
+        border: none;
+        margin-left: -150px;
+        opacity: 1;
+        top: 0;
+        transform: scale(0.131) translate(-543%,308%);
+      }
+      .reveal .storyboard-wrapper {
+        width: 960px;
+        height: 600px;
+        background-color: none;
+        position: relative;
+        overflow: hidden;
+      }
+      .reveal .storyboard-wrapper.zoom .messy-wrapper {
+        transform: none;
+      }
+
+    </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section>
+          <h1>ShareX</h1>
+          <br>
+          <h2>打造跨平台的原生应用</h2>
+          <br>
+					<p>Rocky Duan @ PeachApp.com</p>
+        </section>
+        <section style="text-align: left">
+					<h2>自我介绍</h2>
+          <ul>
+            <li><h3>UC Berkeley, 2014</h3></li>
+            <li><h3>PeachApp.com CTO</h3></li>
+            <li><h3>全栈工程师</h3></li>
+          </ul>
+        </section>
+        <section style="text-align: left">
+					<h2>公司介绍</h2>
+          <ul>
+            <li><h3>Peach: 革命性的移动电商</h3></li>
+            <li><h3>九分钟极速闪拍模式</h3></li>
+            <li><h3>IDG千万级天使轮投资</h3></li>
+          </ul>
+        </section>
+        <section data-background="images/vatican_edited.png">
+          <h1>Mobile!</h1>
+        </section>
+        <section>
+          <img src="images/facepalm.svg" style="width: 400px; border: none"/>
+          <h1>Mobile...</h1>
+        </section>
+        <section>
+          <h1>亲身经历</h1>
+        </section>
+        <section data-state="initial storyboard-slide">
+          <div class="storyboard-wrapper">
+            <div class="messy-wrapper">
+              <img src="images/messy_storyboard.png" class="messy-storyboard" />
+              <img src="images/initial_storyboard.png" class="initial-storyboard" />
+              <div class="fragment storyboard-zoom-trigger"></div>
+              <img class="fragment" src="images/cereal-guy-cereal-guy-spitting.svg" style="position: absolute; bottom: 10px; border: none; box-shadow: none; right: 0" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <img src="images/storyboard_merge_hell.png" />
+        </section>
+        <section>
+          <img src="images/ios_message_list_code.png" />
+        </section>
+        <section>
+          <img src="images/web_message_list_code.png" style="border: none" />
+        </section>
+        <section>
+          <img src="images/ios_loading.gif" style="border: none; width: 300px" />
+        </section>
+        <section>
+          <img src="images/ios_average_review_time.png" style="width: 700px" />
+        </section>
+        <!--<section>
+        </section>
+        <section>
+          <h3>iOS 界面开发</h3>
+          <h2>StoryBoard / Interface Builder?</h2>
+        </section>
+        <section>
+          <h3>iOS界面开发</h3>
+          <h2>纯代码实现？</h2>
+        </section>
+        <section>
+          <h3>Android界面开发</h3>
+          <h2>Layout Editor / XML?</h2>
+        </section>-->
+        <section>
+          <h2 style="text-transform: none">&ldquo;There should be a better way to build apps.&rdquo; — Peach</h2>
+        </section>
+        <section>
+          <h1 style="text-transform: none">DEMO</h1>
+        </section>
+        <section style="text-align: left">
+          <h3 style="text-transform: none">原理</h3>
+          <ul>
+            <li class="fragment">
+              <h4>传统MVVM架构</h4>
+              <h4>Model &lt;-&gt; ViewModel &lt;-&gt; View</h4>
+            </li>
+            <li class="fragment">
+              <h4>ShareX架构</h4>
+              <h4>Model &lt;-&gt; ViewModel &lt;-&gt; <a>RenderElement</a> &lt;-&gt; View</h4>
+              <h4 style="text-align: right" class="fragment">
+                例子：Label &lt;-&gt; UILabel<br>
+                      Button &lt;-&gt; UIButton<br>
+              </h4>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3 style="text-transform: none">等等，好像忘了什么...</h3>
+        </section>
+        <section style="text-align: left">
+          <h3 style="text-transform: none">原理</h3>
+          <li>
+            <h4>ShareX架构</h4>
+            <h4><a>Model &lt;-&gt; ViewModel &lt;-&gt; RenderElement</a> &lt;-&gt; View</h4>
+          </li>
+        </section>
+        <section style="text-align: left">
+          <h3>用户事件记录/分析</h3>
+          <ul>
+            <li class="fragment">默认记录所有页面跳转</li>
+            <li class="fragment">
+            自定义数据记录
+<pre><code class="lang-xml" style="padding-right: 100px">&lt;Button Text="Click me"&gt;
+  &lt;Button.Click&gt;
+    &lt;command:TrackEvent Name="sample button clicked" /&gt;
+      &lt;command:TrackEvent.Data&gt;
+        &lt;MapEntry
+          Key="username"
+          Value="$Bind(Content.Name)"
+          /&gt;
+      &lt;/command:TrackEvent.Data&gt;
+    &lt;/command:TrackEvent&gt;
+  &lt;/Button.Click&gt;
+&lt;/Button&gt;
+</code></pre>
+            </li>
+            <li class="fragment">实时获取在线用户当前页面、历史操作</li>
+          </ul>
+        </section>
+        <section style="text-align: left">
+          <h3>A/B测试</h3>
+          <ul>
+            <li class="fragment">
+              传统模式<br>
+              事先编码大量逻辑，后端调整配置文件
+            </li>
+            <li class="fragment">
+              ShareX<br>
+              后端调整Template文件，对页面100%操控能力
+            </li>
+          </ul>
+        </section>
+        <section style="text-align: left">
+          <h3>页面导航</h3>
+          <pre><code class="lang-java">// Shared code
+page.requestRoute(new SignInRoute());          
+
+// Android
+...
+void handleRoute(Activity senderActivity, AppRoute toRoute) {
+  if (toRoute instanceof SignInRoute) {
+    Intent intent = new Intent(senderActivity, SignInActivity.class);
+    senderActivity.startActivity(intent);
+  }
+}
+
+// iOS
+...
+void handleRoute(UIViewController senderController, AppRoute toRoute) {
+  if (toRoute instanceof SignInRoute) {
+    senderController.presentViewController(new SignInViewController(), true, null);
+  }
+}
+          </code></pre>
+        </section>
+        <section style="text-align: left">
+          <h3>页面导航</h3>
+          <pre><code class="lang-java">// Shared code
+...
+String serialize(AppRoute route) {
+  if (route instanceof SignInRoute) {
+    return "/app/sign_in";
+  }
+}
+
+AppRoute deserialize(String url) {
+  if (url.equals("/app/sign_in")) {
+    return new SignInRoute();
+  }
+}
+          </code></pre>
+        </section>
+        <section style="text-align: left">
+          <h3>页面导航</h3>
+          <ul>
+            <li>
+            <p>轻松集成Deep-Linking</p>
+            <p><code>peachapp://app/sign_in</code> -&gt; <code>/app/sign_in</code> -&gt <code>SignInRoute</code>
+            </li>
+            <li>
+            <p>轻松集成推送消息跳转</p>
+            <p><code>{ "url": "/app/sign_in" }</code> -&gt <code>SignInRoute</code>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>j2objc @ Google</h3>
+          <h4>Java to Objective-C transpiler</h4>
+          <div style="overflow: hidden">
+            <ul class="fragment" style="display: inner-block">
+              <li>Label.java</li>
+              <li>XmlParser.java</li>
+              ...
+            </ul>
+            <span class="fragment" style="display: inner-block">&lt;-&gt;</span>
+            <ul class="fragment" style="display: inner-block">
+              <li>Label.h</li>
+              <li>Label.m</li>
+              <li>XmlParser.h</li>
+              <li>XmlParser.m</li>
+              ...
+            </ul>
+          </div>
+        </section>
+        <section style="text-align: left">
+          <h3>示例</h3>
+          <div>
+<pre><code class="lang-java">// ArrayUtil.java
+public static &lt;T&gt; boolean contains(T[] arr, T item) {
+    for (int i = 0; i < arr.length; ++i) {
+        if (ObjectUtil.equal(arr[i], item)) {
+            return true;
+        }
+    }
+    return false;
+}
+</code></pre>
+          </div>
+          <div>
+<pre><code class="lang-m">// ArrayUtil.m
+jboolean SXArrayUtil_containsWithNSObjectArray_withId_(IOSObjectArray *arr, id item) {
+  SXArrayUtil_initialize();
+  for (jint i = 0; i < ((IOSObjectArray *) nil_chk(arr))->size_; ++i) {
+    if (SXObjectUtil_equalWithId_withId_(IOSObjectArray_Get(arr, i), item)) {
+      return YES;
+    }
+  }
+  return NO;
+}
+</code></pre>
+          </div>
+        </section>
+        <section style="text-align: left">
+          <h3>内存模型</h3>
+          <h4>Garbage Collection vs. Reference Counting</h4>
+<pre><code class="lang-java">// Parent.java
+public class Parent {
+  private Child child;
+}
+
+// Child.java
+public class Child {
+  private Parent parent;
+}
+</pre></code>
+<pre><code class="lang-java">// Parent.java
+public class Parent {
+  private Child child;
+}
+
+// Child.java
+public class Child {
+  @Weak private Parent parent;
+}
+</pre></code>
+        </section>
+        <section style="text-align: left">
+          <h3>原生API调用</h3>
+            <pre><code class="lang-java">// CGContext.java
+@Mapping("CGContextRef")
+@Library("CoreGraphics/CoreGraphics.h")
+public class CGContext {
+    @GlobalFunction("CGContextDrawPath")
+    public static native void drawPath(CGContext c, @Representing("CGPathDrawingMode") long mode);
+}
+
+// (Some Java file)
+CGContext.drawPath(c, CGPathDrawingMode.Fill);
+            </pre></code>
+            <pre><code class="lang-java">// (Some Objective-C file)
+CGContextDrawPath(c, kCGPathFill);
+            </pre></code>
+        </section>
+
+        <section style="text-align: left">
+          <h4>与其它跨平台框架的对比</h4>
+          <br>
+            <table style="font-size: 80%">
+						<thead>
+							<tr>
+								<th></th>
+								<th>ShareX</th>
+								<th>HTML5</th>
+								<th>React Native</th>
+								<th>Xamarin</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>内存管理</td>
+								<td>原生</td>
+								<td>JavaScript GC</td>
+								<td>GC+原生混合模型</td>
+								<td>GC+原生混合模型</td>
+							</tr>
+							<tr class="fragment">
+								<td>原生API调用</td>
+                <td>透明<br>无附加成本</td>
+								<td>不直接支持</td>
+								<td>不直接支持</td>
+                <td>机制非常复杂</td>
+							</tr>
+							<tr class="fragment">
+								<td>调试</td>
+								<td>官方工具</td>
+								<td>不成熟</td>
+								<td>第三方工具</td>
+								<td>第三方工具</td>
+							</tr>
+							<tr class="fragment">
+								<td>动态性</td>
+                <td>动态加载<br>Template文件</td>
+								<td>JavaScript</td>
+								<td>JavaScript</td>
+								<td>不支持</td>
+							<tr>
+						</tbody>
+					</table>
+        </section>
+        <section style="text-align: left">
+          <h3>Mobile Web</h3>
+          <h4 class="fragment">GWT: Java to JavaScript transpiler</h4>
+          <h4 class="fragment">
+            Java --j2objc--> iOS <br>
+            Java --原生--> Android <br>
+            Java --GWT--> Mobile Web<br>
+          </h4>
+        </section>
+        <section>
+          <h1>即将开源</h1>
+        </section>
+        <section style="text-align: left">
+          <div class="span-6">
+            <h2>招贤纳士</h2>
+            <ul>
+              <li>iOS / Android / 全栈工程师</li>
+              <li>&ldquo;做有追求的程序员&rdquo;</li>
+              <li>在自己喜欢的城市远程工作</li>
+              <li>hr@peachapp.com</li>
+            </ul>
+          </div>
+          <div class="span-6" style="margin-left: 100px">
+            <img src="images/wechat_qr.jpg" style="width: 300px; height: 300px" />
+            <p>微信群：PeachApp技术交流</p>
+          </div>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+      Reveal.addEventListener('fragmentshown', function(event) {
+        if (event.fragment.classList.contains("storyboard-zoom-trigger")) {
+          document.querySelector(".storyboard-wrapper").classList.add("zoom");
+        }
+      });
+      Reveal.addEventListener('fragmenthidden', function(event) {
+        if (event.fragment.classList.contains("storyboard-zoom-trigger")) {
+          document.querySelector(".storyboard-wrapper").classList.remove("zoom");
+        }
+      });
+
+		</script>
+
+	</body>
+</html>
