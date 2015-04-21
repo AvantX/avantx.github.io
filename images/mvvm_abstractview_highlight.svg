@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1692px" height="119px" viewBox="0 0 1692 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>mvvm_abstractview_highlight</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="mvvm_abstractview_highlight" sketch:type="MSArtboardGroup">
+            <text id="Model" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#E6AC52">
+                <tspan x="0" y="82">Model</tspan>
+            </text>
+            <text id="ViewModel" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#E6AC52">
+                <tspan x="383" y="82">ViewModel</tspan>
+            </text>
+            <text id="AbstractView" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#E6AC52">
+                <tspan x="914" y="82">AbstractView</tspan>
+            </text>
+            <g id="double-arrow" sketch:type="MSLayerGroup" transform="translate(777.000000, 62.000000)" stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" stroke-linecap="square">
+                <path d="M8.5,2 L97.5224686,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M97.5224686,2 L86.7224686,-1 L86.7224686,5 L97.5224686,2 Z"></path>
+                <path d="M34.5,2 L0,2" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-decoration-1" d="M0,2 L10.8,5 L10.8,-1 L0,2 Z"></path>
+            </g>
+            <text id="ViewModel-Copy" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#E6AC52">
+                <tspan x="383" y="82">ViewModel</tspan>
+            </text>
+            <g id="double-arrow-copy-2" sketch:type="MSLayerGroup" transform="translate(777.000000, 62.000000)" stroke="#E6AC52" stroke-width="4" fill="#E6AC52" stroke-linecap="square">
+                <path d="M8.5,2 L97.5224686,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M97.5224686,2 L86.7224686,-1 L86.7224686,5 L97.5224686,2 Z"></path>
+                <path d="M34.5,2 L0,2" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-decoration-1" d="M0,2 L10.8,5 L10.8,-1 L0,2 Z"></path>
+            </g>
+            <g id="double-arrow-copy" sketch:type="MSLayerGroup" transform="translate(246.000000, 62.000000)" stroke="#E6AC52" stroke-width="4" fill="#E6AC52" stroke-linecap="square">
+                <path d="M8.5,2 L97.5224686,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M97.5224686,2 L86.7224686,-1 L86.7224686,5 L97.5224686,2 Z"></path>
+                <path d="M34.5,2 L0,2" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-decoration-1" d="M0,2 L10.8,5 L10.8,-1 L0,2 Z"></path>
+            </g>
+            <text id="Vie" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#FFFFFF">
+                <tspan x="1527" y="82">Vie</tspan>
+            </text>
+            <text id="View" sketch:type="MSTextLayer" font-family="Montserrat" font-size="64" font-weight="normal" fill="#FFFFFF">
+                <tspan x="1527" y="82">View</tspan>
+            </text>
+            <g id="double-arrow-copy-3" sketch:type="MSLayerGroup" transform="translate(1390.000000, 62.000000)" stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" stroke-linecap="square">
+                <path d="M8.5,2 L97.5224686,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M97.5224686,2 L86.7224686,-1 L86.7224686,5 L97.5224686,2 Z"></path>
+                <path d="M34.5,2 L0,2" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-decoration-1" d="M0,2 L10.8,5 L10.8,-1 L0,2 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

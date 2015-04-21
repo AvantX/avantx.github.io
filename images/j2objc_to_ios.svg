@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="508px" height="140px" viewBox="0 0 508 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>j2objc_to_ios</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="j2objc_to_ios" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+            <text id="iOS" sketch:type="MSTextLayer" font-family="Montserrat" font-size="48" font-weight="normal">
+                <tspan x="215" y="47">iOS</tspan>
+            </text>
+            <text id="j2objc" sketch:type="MSTextLayer" transform="translate(86.500000, 73.500000) rotate(-26.000000) translate(-86.500000, -73.500000) " font-family="Montserrat" font-size="24" font-weight="normal">
+                <tspan x="50" y="82">j2objc</tspan>
+            </text>
+            <path d="M22.5,130.5 L192.5,44.5" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M192.5,44.5 L181.508745,46.6982511 L184.217192,52.0521576 L192.5,44.5 Z" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

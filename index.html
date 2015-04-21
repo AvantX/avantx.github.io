@@ -160,13 +160,27 @@
           <h2>Layout Editor / XML?</h2>
         </section>-->
         <section>
-          <h2 style="text-transform: none">&ldquo;There should be a better way to build apps.&rdquo; — Peach</h2>
+          <h4 style="text-transform: none">&ldquo;There should be a better way to build apps.&rdquo;</h4>
         </section>
         <section>
-          <h1 style="text-transform: none">DEMO</h1>
+          <h2>DEMO</h2>
         </section>
-        <section style="text-align: left">
-          <h3 style="text-transform: none">原理</h3>
+        <section>
+          <h2>架构设计</h2>
+        </section>
+        <section style="text-align: left" >
+          <h3>传统MVVM架构</h3>
+          <img src="images/mvvm.svg" style="border: none; background: none; height: 80px" />
+        </section>
+        <section style="text-align: left" >
+          <h3>ShareX架构</h3>
+          <img src="images/mvvm_abstractview.svg" style="border: none; background: none; height: 80px" />
+        </section>
+        <section style="text-align: left" >
+          <h3>ShareX架构</h3>
+          <img src="images/mvvm_abstractview_highlight.svg" style="border: none; background: none; height: 80px" />
+        </section>
+        <!--<section>
           <ul>
             <li class="fragment">
               <h4>传统MVVM架构</h4>
@@ -182,16 +196,13 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h3 style="text-transform: none">等等，好像忘了什么...</h3>
-        </section>
         <section style="text-align: left">
           <h3 style="text-transform: none">原理</h3>
           <li>
             <h4>ShareX架构</h4>
             <h4><a>Model &lt;-&gt; ViewModel &lt;-&gt; RenderElement</a> &lt;-&gt; View</h4>
           </li>
-        </section>
+        </section>-->
         <section style="text-align: left">
           <h3>用户事件记录/分析</h3>
           <ul>
@@ -201,13 +212,6 @@
 <pre><code class="lang-xml" style="padding-right: 100px">&lt;Button Text="Click me"&gt;
   &lt;Button.Click&gt;
     &lt;command:TrackEvent Name="sample button clicked" /&gt;
-      &lt;command:TrackEvent.Data&gt;
-        &lt;MapEntry
-          Key="username"
-          Value="$Bind(Content.Name)"
-          /&gt;
-      &lt;/command:TrackEvent.Data&gt;
-    &lt;/command:TrackEvent&gt;
   &lt;/Button.Click&gt;
 &lt;/Button&gt;
 </code></pre>
@@ -230,28 +234,47 @@
         </section>
         <section style="text-align: left">
           <h3>页面导航</h3>
-          <pre><code class="lang-java">// Shared code
-page.requestRoute(new SignInRoute());          
-
-// Android
-...
-void handleRoute(Activity senderActivity, AppRoute toRoute) {
-  if (toRoute instanceof SignInRoute) {
-    Intent intent = new Intent(senderActivity, SignInActivity.class);
-    senderActivity.startActivity(intent);
+          <pre class="fragment"><code class="lang-java">// Shared code
+String serialize(AppRoute route) {
+  if (route instanceof SignInRoute) {
+    return "/app/sign_in";
   }
 }
 
-// iOS
+AppRoute deserialize(String url) {
+  if (url.equals("/app/sign_in")) {
+    return new SignInRoute();
+  }
+}</code></pre>
+          <pre class="fragment"><code class="lang-java">page.requestRoute(new SignInRoute());          
+// 或者在Template文件中：
+// &lt;command:RequestRoute Path="/app/sign_in" /&gt;</code></pre>
+        </section>
+        <section style="text-align: left">
+          <h3>页面导航</h3>
+          <pre><code class="lang-java">// Android
 ...
-void handleRoute(UIViewController senderController, AppRoute toRoute) {
+void handleRoute(Page sender, AppRoute toRoute) {
   if (toRoute instanceof SignInRoute) {
-    senderController.presentViewController(new SignInViewController(), true, null);
+    Intent intent = new Intent(getActivity(sender), SignInActivity.class);
+    getActivity(sender).startActivity(intent);
   }
 }
           </code></pre>
         </section>
         <section style="text-align: left">
+          <h3>页面导航</h3>
+          <pre><code class="lang-java">// iOS
+...
+void handleRoute(Page sender, AppRoute toRoute) {
+  if (toRoute instanceof SignInRoute) {
+    getViewController(sender).presentViewController(
+        new SignInViewController(), true, null);
+  }
+}
+          </code></pre>
+        </section>
+        <!--<section style="text-align: left">
           <h3>页面导航</h3>
           <pre><code class="lang-java">// Shared code
 ...
@@ -267,72 +290,69 @@ AppRoute deserialize(String url) {
   }
 }
           </code></pre>
+        </section>-->
+        <section style="text-align: left">
+          <h3>Deep Linking</h3>
+          <img class="fragment" src="images/deep_linking.svg" style="border: none; background: none" />
         </section>
         <section style="text-align: left">
-          <h3>页面导航</h3>
-          <ul>
-            <li>
-            <p>轻松集成Deep-Linking</p>
-            <p><code>peachapp://app/sign_in</code> -&gt; <code>/app/sign_in</code> -&gt <code>SignInRoute</code>
-            </li>
-            <li>
-            <p>轻松集成推送消息跳转</p>
-            <p><code>{ "url": "/app/sign_in" }</code> -&gt <code>SignInRoute</code>
-            </li>
-          </ul>
+          <h3>推送消息跳转</h3>
+          <img class="fragment" src="images/push_notifications.svg" style="border: none; background: none" />
         </section>
-
+        <section>
+          <h3>如何在不同平台间共用代码？</h3>
+        </section>
         <section>
           <h3>j2objc @ Google</h3>
           <h4>Java to Objective-C transpiler</h4>
+        </section>
+        <section>
           <div style="overflow: hidden">
-            <ul class="fragment" style="display: inner-block">
-              <li>Label.java</li>
-              <li>XmlParser.java</li>
-              ...
-            </ul>
-            <span class="fragment" style="display: inner-block">&lt;-&gt;</span>
-            <ul class="fragment" style="display: inner-block">
-              <li>Label.h</li>
-              <li>Label.m</li>
-              <li>XmlParser.h</li>
-              <li>XmlParser.m</li>
-              ...
-            </ul>
+            <img src="images/transpiler_java_source.svg" style="height: 400px; border: none; background: none" />
+            <img class="fragment" src="images/transpiler_arrow.svg" style="height: 400px; border: none; background: none" />
+            <img class="fragment" src="images/transpiler_objc_source.svg" style="height: 400px; border: none; background: none" />
           </div>
         </section>
         <section style="text-align: left">
           <h3>示例</h3>
           <div>
-<pre><code class="lang-java">// ArrayUtil.java
-public static &lt;T&gt; boolean contains(T[] arr, T item) {
-    for (int i = 0; i < arr.length; ++i) {
-        if (ObjectUtil.equal(arr[i], item)) {
-            return true;
-        }
+<pre><code class="lang-java">// MathUtil.java
+public static boolean isPrime(int num) {
+  if (num % 2 == 0) {
+    return num == 2;
+  }
+  for (int i = 3; i * i <= num; i += 2) {
+    if (num % i == 0) {
+      return false;
     }
-    return false;
+  }
+  return true;
 }
 </code></pre>
           </div>
+        </section>
+        <section style="text-align: left">
+          <h3>示例</h3>
           <div>
-<pre><code class="lang-m">// ArrayUtil.m
-jboolean SXArrayUtil_containsWithNSObjectArray_withId_(IOSObjectArray *arr, id item) {
-  SXArrayUtil_initialize();
-  for (jint i = 0; i < ((IOSObjectArray *) nil_chk(arr))->size_; ++i) {
-    if (SXObjectUtil_equalWithId_withId_(IOSObjectArray_Get(arr, i), item)) {
-      return YES;
+<pre><code class="lang-m">// MathUtil.m
+jboolean SXMathUtil_isPrimeWithInt_(jint num) {
+  if (num % 2 == 0) {
+    return num == 2;
+  }
+  for (jint i = 3; i * i <= num; i += 2) {
+    if (num % i == 0) {
+      return NO;
     }
   }
-  return NO;
+  return YES;
 }
 </code></pre>
           </div>
         </section>
         <section style="text-align: left">
           <h3>内存模型</h3>
-          <h4>Garbage Collection vs. Reference Counting</h4>
-<pre><code class="lang-java">// Parent.java
+          <h4 class="fragment">Garbage Collection vs. Reference Counting</h4>
+<pre class="fragment"><code class="lang-java">// Parent.java
 public class Parent {
   private Child child;
 }
@@ -342,7 +362,7 @@ public class Child {
   private Parent parent;
 }
 </pre></code>
-<pre><code class="lang-java">// Parent.java
+<pre class="fragment"><code class="lang-java">// Parent.java
 public class Parent {
   private Child child;
 }
@@ -355,33 +375,30 @@ public class Child {
         </section>
         <section style="text-align: left">
           <h3>原生API调用</h3>
-            <pre><code class="lang-java">// CGContext.java
+            <pre class="fragment"><code class="lang-java">// (Some Java file)
+CGContext.drawPath(c, CGPathDrawingMode.Fill);</pre></code>
+            <pre class="fragment"><code class="lang-java">// CGContext.java
 @Mapping("CGContextRef")
 @Library("CoreGraphics/CoreGraphics.h")
 public class CGContext {
     @GlobalFunction("CGContextDrawPath")
     public static native void drawPath(CGContext c, @Representing("CGPathDrawingMode") long mode);
-}
-
-// (Some Java file)
-CGContext.drawPath(c, CGPathDrawingMode.Fill);
-            </pre></code>
-            <pre><code class="lang-java">// (Some Objective-C file)
-CGContextDrawPath(c, kCGPathFill);
-            </pre></code>
+}</pre></code>
+            <pre class="fragment"><code class="lang-java">// (Translated Objective-C file)
+CGContextDrawPath(c, kCGPathFill);</pre></code>
         </section>
 
         <section style="text-align: left">
           <h4>与其它跨平台框架的对比</h4>
           <br>
-            <table style="font-size: 80%">
+          <table style="font-size: 80%">
 						<thead>
 							<tr>
 								<th></th>
 								<th>ShareX</th>
-								<th>HTML5</th>
-								<th>React Native</th>
-								<th>Xamarin</th>
+								<th class="fragment">HTML5</th>
+								<th class="fragment">React Native</th>
+								<th class="fragment">Xamarin</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -406,24 +423,20 @@ CGContextDrawPath(c, kCGPathFill);
 								<td>第三方工具</td>
 								<td>第三方工具</td>
 							</tr>
-							<tr class="fragment">
-								<td>动态性</td>
-                <td>动态加载<br>Template文件</td>
-								<td>JavaScript</td>
-								<td>JavaScript</td>
-								<td>不支持</td>
-							<tr>
 						</tbody>
 					</table>
         </section>
         <section style="text-align: left">
           <h3>Mobile Web</h3>
           <h4 class="fragment">GWT: Java to JavaScript transpiler</h4>
-          <h4 class="fragment">
-            Java --j2objc--> iOS <br>
-            Java --原生--> Android <br>
-            Java --GWT--> Mobile Web<br>
-          </h4>
+          <div>
+            <img class="fragment" src="images/from_java_source.svg" style="display: inline-block; margin: 0; border: none; background: none" />
+            <div style="display: inline-block; width: 500px">
+              <img class="fragment" src="images/j2objc_to_ios.svg" style="margin: 0; border: none; background: none" />
+              <img class="fragment" src="images/native_to_android.svg" style="margin: 0; border: none; background: none" />
+              <img class="fragment" src="images/gwt_to_mobile_web.svg" style="margin: 0; border: none; background: none" />
+            </div>
+          </div>
         </section>
         <section>
           <h1>即将开源</h1>
@@ -438,7 +451,7 @@ CGContextDrawPath(c, kCGPathFill);
               <li>hr@peachapp.com</li>
             </ul>
           </div>
-          <div class="span-6" style="margin-left: 100px">
+          <div class="span-6" style="margin-left: 100px; text-align: center">
             <img src="images/wechat_qr.jpg" style="width: 300px; height: 300px" />
             <p>微信群：PeachApp技术交流</p>
           </div>
