@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="508px" height="80px" viewBox="0 0 508 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>sharpen_to_windows_phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="sharpen_to_windows_phone" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+            <path d="M20,17.96 L172,39.9599991" id="Line-Copy" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-decoration-1" d="M172,39.9599991 L161.741109,35.4438994 L160.881644,41.3820236 L172,39.9599991 Z" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+            <text id="Windows-Phone" sketch:type="MSTextLayer" font-family="Montserrat" font-size="35" font-weight="normal">
+                <tspan x="201" y="63">Windows Phone</tspan>
+            </text>
+            <text id="Sharpen" sketch:type="MSTextLayer" transform="translate(88.078591, 46.511606) rotate(8.000000) translate(-88.078591, -46.511606) " font-family="Montserrat" font-size="24" font-weight="normal">
+                <tspan x="37.578591" y="55.0116058">Sharpen</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
