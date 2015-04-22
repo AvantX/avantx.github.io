@@ -6,8 +6,8 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="gwt_to_mobile_web" sketch:type="MSArtboardGroup" fill="#FFFFFF">
-            <text id="Mobile-Web" sketch:type="MSTextLayer" font-family="Montserrat" font-size="35" font-weight="normal">
-                <tspan x="201" y="56">Mobile Web</tspan>
+            <text id="移动端网页" sketch:type="MSTextLayer" font-family="Heiti SC" font-size="35" font-weight="260">
+                <tspan x="201" y="52">移动端网页</tspan>
             </text>
             <text id="GWT" sketch:type="MSTextLayer" transform="translate(83.578591, 41.651947) rotate(11.000000) translate(-83.578591, -41.651947) " font-family="Montserrat" font-size="24" font-weight="normal">
                 <tspan x="54.578591" y="50.1519465">GWT</tspan>
