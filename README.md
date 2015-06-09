@@ -1,1 +1,1 @@
-# AvantX - 打造跨平台的原生手机应用
+# AvantX - THE cross-platform framework for developing native mobile apps.
