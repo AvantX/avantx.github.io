@@ -1,1 +1,3 @@
-# AvantX - THE cross-platform framework for developing native mobile apps.
+# AvantX 
+
+THE cross-platform framework for developing native mobile apps.
